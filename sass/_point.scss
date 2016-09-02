@@ -1,0 +1,44 @@
+.point {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  @include transform(translate(-50%, -50%));
+  z-index: 1;
+  opacity: 1;
+  cursor: pointer;
+
+  > h3 {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    @include transform(translateY(-50%));
+    margin: 0;
+    z-index: 5;
+  }
+
+  .marker {
+    width: 50%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+
+    &.stain {
+      width: 100%;
+      top: 50%;
+    }
+  }
+
+  &:hover {
+    z-index: 5;
+
+    > h3 {
+      text-decoration: underline;
+    }
+
+    .point-tooltip {
+      visibility: visible;
+    }
+  }
+}

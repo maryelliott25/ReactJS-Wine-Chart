@@ -1,0 +1,38 @@
+.ribbon {
+	width: auto;
+	position: absolute;
+	padding: 0 20px;
+	text-align: center;
+	background: #d64b4b;
+	background: -webkit-gradient(linear, left top, left bottom, from(#d64b4b), to(#ab2c2c));
+	box-shadow: rgba(000,000,000,0.3) 0 0px 0px;
+}
+.ribbon h2 {
+	font-weight: 100;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	margin: 8px 0;
+}
+.ribbon.fruity {
+   top: 50%;
+   transform: translateY(-50%);
+   left: -115px;
+}
+.ribbon.earthy {
+   top: 50%;
+   transform: translateY(-50%);
+   right: -115px;
+}
+.ribbon.bold {
+   left: 50%;
+   transform: translateX(-50%);
+   top: -52px;
+}
+.ribbon.light {
+	left: 50%;
+    transform: translateX(-50%);
+    bottom: -52px;
+}

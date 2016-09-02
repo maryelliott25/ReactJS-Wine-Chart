@@ -74,7 +74,9 @@ gulp.task('serve', function(done) {
 
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: [require('node-bourbon').includePaths]
+    }).on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./'));
 });
